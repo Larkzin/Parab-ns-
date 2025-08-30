@@ -1,68 +1,110 @@
-/* Estilos para o corpo do site */
-body {
-    font-family: 'Arial', sans-serif;
+/* Resetando margens e paddings */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fef1f7;  /* Rosa claro suave */
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1500x1500.png?text=Fundo+Rom%C3%A2ntico'); /* Fundo sutil */
+    background-size: cover;
+    background-position: center;
     text-align: center;
 }
 
-/* Container centralizado */
+/* Container central */
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-/* Títulos */
-h1 {
-    font-size: 2.5em;
-    color: #2E8B57;
-    margin-bottom: 20px;
-}
-
-/* Parágrafos */
-p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin: 10px 0;
-}
-
-/* Imagem */
-img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px 0;
+    max-width: 900px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Botão */
-button {
-    background-color: #2E8B57;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
+/* Conteúdo principal */
+.content {
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #e91e63; /* Rosa vibrante */
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;  /* Fonte cursiva romântica */
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+/* Parágrafo com a mensagem */
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Imagem do presente */
+.present-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Mensagem adicional */
+.message {
+    font-size: 1.2rem;
+    color: #9b4d96;  /* Roxo suave */
+    font-weight: bold;
     margin-top: 20px;
 }
 
-button:hover {
-    background-color: #228B22;
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
     }
-
-    p {
-        font-size: 1em;
+    50% {
+        transform: translateY(-10px);
     }
+    100% {
+        transform: translateY(0);
+    }
+}
 
-    img {
-        max-width: 100%;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }
