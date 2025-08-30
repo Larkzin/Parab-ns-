@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('tt.jpg'); /* Fundo sutil */
+    background-image: url('rosa.jpg'); /* Fundo sutil */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -108,6 +108,7 @@ p {
         transform: scale(1);
     }
 }
+
 
 
 
