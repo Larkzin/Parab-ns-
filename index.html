@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surpresa de Aniversário</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Escaneie o QR Code</h1>
+    <p>Tem uma surpresa esperando por você 🎉</p>
+    <canvas id="qrcode"></canvas>
+  </div>
+
+  <script>
+    const urlDestino = "https://seu-usuario.github.io/meu-site-aniversario/aniversario.html";
+    QRCode.toCanvas(document.getElementById('qrcode'), urlDestino, {
+      width: 200,
+      color: {
+        dark: '#000000',
+        light: '#ffffff'
+      }
+    }, function (error) {
+      if (error) console.error(error);
+    });
+  </script>
+</body>
+</html>
