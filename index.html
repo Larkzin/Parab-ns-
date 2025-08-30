@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Surpresa de Aniversário</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QR Code - Aniversário</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Escaneie o QR Code</h1>
-    <p>Tem uma surpresa esperando por você 🎉</p>
-    <canvas id="qrcode"></canvas>
-  </div>
+    <div class="container">
+        <h1>QR Code de Aniversário</h1>
+        <p>Escaneie o QR Code abaixo para ir para a página de aniversário:</p>
+        
+        <!-- QR Code que redireciona para o link correto -->
+        <div id="qrCode">
+            <img src="https://via.placeholder.com/150x150.png?text=QR+Code" alt="QR Code">
+        </div>
+        
+        <button id="redirectButton">Ir para a página de aniversário</button>
+    </div>
 
-  <script>
-    const urlDestino = "https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/aniversario.html";
-    QRCode.toCanvas(document.getElementById('qrcode'), urlDestino, {
-      width: 200,
-      color: {
-        dark: '#000000',
-        light: '#ffffff'
-      }
-    }, function (error) {
-      if (error) console.error(error);
-    });
-  </script>
+    <script>
+        // Gerar o link completo para a página de aniversário
+        const urlDestino = "https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/aniversario.html";
+
+        // Função para redirecionar ao clicar no botão
+        document.getElementById("redirectButton").onclick = function() {
+            window.location.href = urlDestino;
+        };
+    </script>
 </body>
 </html>
