@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://unsplash.com/pt-br/fotografias/fotografia-em-close-up-de-coracao-em-forma-de-fada-leve-na-areia-marrom-I4dR572y7l0'); /* Fundo sutil */
+    background-image: url('tt.jpg'); /* Fundo sutil */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -108,4 +108,5 @@ p {
         transform: scale(1);
     }
 }
+
 
